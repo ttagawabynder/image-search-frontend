@@ -1,0 +1,27 @@
+.result-section-container {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .result-section-divider {
+    width: 100%;
+    border-top: 1px solid rgba(51, 51, 51, 0.1);
+    margin-top: 1px;
+  }
+
+  .result-section-heading {
+    color: rgba(61, 70, 83, 0.8);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    padding-left: 15px;
+    padding-right: 8px;
+    white-space: nowrap;
+  }
+
+  .result-section-heading .result-section-heading-count {
+    font-weight: normal;
+  }

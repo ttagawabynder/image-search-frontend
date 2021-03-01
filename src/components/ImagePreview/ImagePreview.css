@@ -1,0 +1,11 @@
+.image-preview-container {
+    display: flex;
+}
+
+.image-preview {
+    width: 200px;
+}
+
+/* .image-preview-details {
+    display: flex;
+} */
