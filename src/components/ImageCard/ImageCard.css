@@ -4,13 +4,13 @@
     left: 10px;
     z-index: 2;
     color: #FFFFFF;
-    width: 1.5em;
-    height: 1.5em;
+    width: 2.5em;
+    height: 2.5em;
     box-sizing: initial;
     background: #fff;
     text-align: center;
     border-radius: 50% !important;    
 
-    line-height: 1.5em;
+    line-height: 2.5em;
     box-sizing: content-box;  
 }

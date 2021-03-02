@@ -6,7 +6,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 
 const App = () => {
     const [file, setFile] = useState();
-    const [imageList, setImageList] = useState([]);
+    const [imageList, setImageList] = useState({});
     return (
         <div className="ui">
             <BrowserRouter>
@@ -14,7 +14,7 @@ const App = () => {
                     <SearchBar file={file} setFile={setFile} setImageList={setImageList}/>
                 </Route>
                 <Route path="/results" exact>
-                    {imageList.length > 0 && <SearchResults images={imageList} file={file}/>}
+                    <SearchResults images={imageList} file={file}/>
                 </Route>
             </BrowserRouter>
         </div>

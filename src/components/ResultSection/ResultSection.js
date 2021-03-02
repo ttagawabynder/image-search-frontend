@@ -4,6 +4,7 @@ import "./ResultSection.css";
 // import "keanuHappy" from "../../images/keanuHappy.png";
 
 const ResultSection = ({accentColor, accentColorLight, boxShadow, heading, headingImage, results}) => {
+    console.log('results', results);
     return (
         <div className="result-section-container">
             <div className="result-section-heading-container">
@@ -14,7 +15,7 @@ const ResultSection = ({accentColor, accentColorLight, boxShadow, heading, headi
             <div className="ui cards" >
                 {
                     results.map((image, idx) => (
-                        <ImageCard boxShadow={boxShadow} accentColor={accentColor} imageUrl={image.url} filename="test" score="99" key={idx}/>
+                        <ImageCard boxShadow={boxShadow} accentColor={accentColor} imageUrl={image.src} filename={image.filename} score={image.score} key={idx}/>
                     ))
                 }
             </div>
