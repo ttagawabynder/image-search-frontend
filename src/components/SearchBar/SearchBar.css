@@ -1,8 +1,8 @@
-.search-bar {
+/* .search-bar {
     position: absolute;
     top: 150px;
     left: 850px;
-}
+} */
 
 .search-file-selector {
     height: 48px;
@@ -23,6 +23,9 @@
     background-size: cover;
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .search-button {
@@ -42,11 +45,11 @@
 .loading-bar {
     display: flex;
     align-items: center;
-    position: absolute;
+    /* position: absolute; */
     height: 48px;
     width: 827px;
-    left: 750px;
-    top: 150px;
+    /* left: 750px;
+    top: 150px; */
     background: #333333;
     border: 3px solid rgba(233, 98, 195, 0.8);
     box-sizing: border-box;
