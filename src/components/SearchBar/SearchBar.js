@@ -47,6 +47,7 @@ const SearchBar = ( {file, setFile, setImageList} ) => {
         <div>
             {!isLoading && (
                 <div className="search-bar-container" style={{backgroundImage: `url("/images/keanuSerious.png")`}}>
+                    <img className="search-logo" src="/images/circuit_logo_white_large.svg"/>
                     <div className="search-bar">
                         <form className="ui form" onSubmit={onSearchSubmit}>
                             <div className="search-file-selector">
