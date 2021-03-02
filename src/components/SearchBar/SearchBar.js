@@ -18,10 +18,15 @@ const SearchBar = ( {file, setFile, setImageList} ) => {
         }
     }
 
+    async function stall(stallTime = 1000) {
+        await new Promise(resolve => setTimeout(resolve, stallTime));
+      }
+
     const onSearchSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
         const response = await axios.get('https://jsonplaceholder.typicode.com/photos');
+        await stall();
         setImageList(response.data.slice(0, 30));
         setIsLoading(false);
         history.push('/results');
@@ -29,16 +34,27 @@ const SearchBar = ( {file, setFile, setImageList} ) => {
     }
 
     return (
-        <div className="search-bar-container" style={{backgroundImage: `url("/images/keanuSerious.png")`}}>
-            <div className="search-bar">
-                <form className="ui form" onSubmit={onSearchSubmit}>
-                    <div className="search-file-selector">
-                        <label id="file-selector-label" for="file-selector">{file ? file.filename : "Search for related images"}</label>
-                        <input id="file-selector" style={{display: "None"}}type="file" onChange={onInputChange}/>
+        <div>
+            {!isLoading && (
+                <div className="search-bar-container" style={{backgroundImage: `url("/images/keanuSerious.png")`}}>
+                    <div className="search-bar">
+                        <form className="ui form" onSubmit={onSearchSubmit}>
+                            <div className="search-file-selector">
+                                <label id="file-selector-label" for="file-selector">{file ? file.filename : "Search for related images"}</label>
+                                <input id="file-selector" style={{display: "None"}}type="file" onChange={onInputChange}/>
+                            </div>
+                            <input className="search-button" type="image" src="/images/searchButton.png" disabled={!file} onClick={onSearchSubmit}/>
+                        </form>
                     </div>
-                    <input className="search-button" type="image" src="/images/searchButton.png" onClick={onSearchSubmit}/>
-                </form>
-            </div>
+                </div>
+            )}
+            {isLoading && (
+                <div className="search-bar-container" style={{backgroundImage: `url("/images/keanuWoah.png")`}}>
+                    <div className="loading-bar">
+                        Finding similar images to {file.filename}...
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

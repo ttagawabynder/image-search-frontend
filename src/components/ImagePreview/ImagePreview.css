@@ -7,7 +7,7 @@
 }
 
 .image-preview-filename {
-    font-family: Overpass Mono;
+    font-family: monospace;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
