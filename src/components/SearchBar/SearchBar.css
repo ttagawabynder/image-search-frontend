@@ -40,6 +40,8 @@
 }
 
 .loading-bar {
+    display: flex;
+    align-items: center;
     position: absolute;
     height: 48px;
     width: 827px;
@@ -55,4 +57,13 @@
     font-size: 16px;
     line-height: 25px;
     color: #FFFFFF;
+    padding-left: 18px;
+}
+
+.loading-image {
+    position: absolute;
+    top: 154px;
+    left: 1521px;
+    height: 40px;
+    border-radius: 8px;
 }

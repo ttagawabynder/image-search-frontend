@@ -48,11 +48,12 @@ const SearchBar = ( {file, setFile, setImageList} ) => {
                     </div>
                 </div>
             )}
-            {isLoading && (
+            {isLoading && file && (
                 <div className="search-bar-container" style={{backgroundImage: `url("/images/keanuWoah.png")`}}>
                     <div className="loading-bar">
                         Finding similar images to {file.filename}...
                     </div>
+                    {/* <img className="loading-image" src={file.url} /> */}
                 </div>
             )}
         </div>
