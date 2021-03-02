@@ -26,18 +26,18 @@ const SearchBar = ( {file, setFile, setImageList} ) => {
         e.preventDefault();
         setIsLoading(true);
         const { filename } = file;
-        const path = '/Users/tylertagawa/Documents/' + filename
-        // const response = await axios.get('http://127.0.0.1:8091/search-image', {
-        //     params: {
-        //         uri: path
-        //     }
-        // });
-        await stall();
-        setImageList({
-            "/Users/tylertagawa/Sites/image-search/public/images/image_data/person/keanuHappy.png": 1.1404776573181152,
-            "/Users/tylertagawa/Sites/image-search/public/images/image_data/nina/nina_face.png": 1.154442310333252
+        const path = '/Users/ayohannes/Desktop/' + filename;
+        const response = await axios.get('http://127.0.0.1:8091/search-image', {
+            params: {
+                uri: path
+            }
         });
-        // setImageList(response.data);
+        await stall();
+        // setImageList({
+        //     "/Users/tylertagawa/Sites/image-search/public/images/image_data/person/keanuHappy.png": 1.1404776573181152,
+        //     "/Users/tylertagawa/Sites/image-search/public/images/image_data/nina/nina_face.png": 1.154442310333252
+        // });
+        setImageList(response.data);
         setIsLoading(false);
         history.push('/results');
         // console.log(response);
