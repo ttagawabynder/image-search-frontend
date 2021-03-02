@@ -15,22 +15,22 @@ const SearchResults = ({images, file}) => {
     const goodResults = [];
     const okResults = [];
 
-    for (const [path, score] of Object.entries(images)) {
-        const pathPieces = path.split('/');
-        console.log('path pieces', pathPieces);
-        const newPath = `/images/image_data/${pathPieces[pathPieces.length-2]}/${pathPieces[pathPieces.length-1]}`;
-        const fileData = {src: newPath, filename: pathPieces[pathPieces.length-1], score: score.toFixed(2)};
-        if (path == "/Users/tylertagawa/Sites/image-search/public/images/image_data/nina/nina_face.png") {
-            for (let i = 0; i<10; i++) {
-                // goodResults.push(fileData)
-                exactResults.push(fileData);
-            }
-        } else {
-            for (let i = 0; i<10; i++) {
-                okResults.push(fileData)
-            }
-        }
-    }
+    // for (const [path, score] of Object.entries(images)) {
+    //     const pathPieces = path.split('/');
+    //     console.log('path pieces', pathPieces);
+    //     const newPath = `/images/image_data/${pathPieces[pathPieces.length-2]}/${pathPieces[pathPieces.length-1]}`;
+    //     const fileData = {src: newPath, filename: pathPieces[pathPieces.length-1], score: score.toFixed(2)};
+    //     if (path == "/Users/tylertagawa/Sites/image-search/public/images/image_data/nina/nina_face.png") {
+    //         for (let i = 0; i<10; i++) {
+    //             // goodResults.push(fileData)
+    //             exactResults.push(fileData);
+    //         }
+    //     } else {
+    //         for (let i = 0; i<10; i++) {
+    //             okResults.push(fileData)
+    //         }
+    //     }
+    // }
 
     for (const [path, score] of Object.entries(images)) {
         const pathPieces = path.split('/');
