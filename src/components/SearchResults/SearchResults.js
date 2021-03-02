@@ -1,6 +1,7 @@
 import React from 'react';
 import ImagePreview from '../ImagePreview/ImagePreview';
 import ResultSection from '../ResultSection/ResultSection';
+import { Link } from 'react-router-dom'
 import "./SearchResults.css";
 
 const SearchResults = ({images, file}) => {
@@ -12,6 +13,7 @@ const SearchResults = ({images, file}) => {
 
     return (
         <div className="search-results">
+            <div className="back-button"><Link to="/">&#60; Back to image upload</Link></div>
             <div className="search-results-section">
                 <div className="heading">UPLOADED IMAGE</div>
                 <ImagePreview imageInfo={file}/>

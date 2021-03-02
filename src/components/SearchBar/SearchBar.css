@@ -1,8 +1,9 @@
-/* .search-bar {
-    position: absolute;
+.search-bar {
+    /* position: absolute;
     top: 150px;
-    left: 850px;
-} */
+    left: 850px; */
+    margin-top: -15%;
+}
 
 .search-file-selector {
     height: 48px;

@@ -19,3 +19,12 @@
 .search-results-section {
     margin-top: 50px;
 }
+
+.back-button {
+    margin-top: 18px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #10BDC7;
+}

@@ -25,7 +25,9 @@ const SearchBar = ( {file, setFile, setImageList} ) => {
     const onSearchSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
-        const response = await axios.get('https://jsonplaceholder.typicode.com/photos');
+        const { filename } = file;
+        const path = '/Users/tylertagawa/Documents/' + filename
+        const response = await axios.get('http://127.0.0.1:8091/search-image?uri=' + path);
         await stall();
         setImageList(response.data.slice(0, 30));
         setIsLoading(false);
