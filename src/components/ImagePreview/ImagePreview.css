@@ -3,9 +3,27 @@
 }
 
 .image-preview {
-    width: 200px;
+    width: 150px;
 }
 
-/* .image-preview-details {
-    display: flex;
-} */
+.image-preview-filename {
+    font-family: Overpass Mono;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    color: #3D4653;
+    margin-bottom: 16px;
+}
+
+.image-preview-detail {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(61, 70, 83, 0.8);
+}
+
+.image-preview-details {
+    margin-left: 25px;
+}

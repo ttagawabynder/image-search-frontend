@@ -1,6 +1,16 @@
-.image-score {
+.ui.cards>.card>.image-score {
     position: absolute;
     top: 5px;
-    right: 10px;
+    left: 10px;
     z-index: 2;
+    color: #FFFFFF;
+    width: 1.5em;
+    height: 1.5em;
+    box-sizing: initial;
+    background: #fff;
+    text-align: center;
+    border-radius: 50% !important;    
+
+    line-height: 1.5em;
+    box-sizing: content-box;  
 }

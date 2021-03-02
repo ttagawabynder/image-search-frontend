@@ -2,10 +2,10 @@ import React from 'react';
 import './ImageCard.css';
 
 
-const ImageCard = ({imageUrl, filename, score}) => {
+const ImageCard = ({imageUrl, filename, score, boxShadow, accentColor}) => {
     return (
-        <div className="card">
-            <div className="image-score">
+        <div className="card" style={{width: "200px", boxShadow: boxShadow}}>
+            <div className="image-score" style={{backgroundColor: accentColor}}>
                 {score}
             </div>
             <div className="image">
