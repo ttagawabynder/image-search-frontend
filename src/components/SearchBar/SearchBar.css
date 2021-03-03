@@ -62,6 +62,7 @@
     line-height: 25px;
     color: #FFFFFF;
     padding-left: 18px;
+    margin-top: -10%;
 }
 
 .loading-image {
@@ -70,4 +71,10 @@
     left: 1521px;
     height: 40px;
     border-radius: 8px;
+}
+
+.search-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }

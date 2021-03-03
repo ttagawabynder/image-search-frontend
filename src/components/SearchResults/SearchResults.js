@@ -36,9 +36,9 @@ const SearchResults = ({images, file}) => {
         const pathPieces = path.split('/');
         const newPath = `/images/image_data/${pathPieces[pathPieces.length-2]}/${pathPieces[pathPieces.length-1]}`;
         const fileData = {src: newPath, filename: pathPieces[pathPieces.length-1], score: score.toFixed(2)};
-        if (score < 0.3) {
+        if (score < 0.1) {
             exactResults.push(fileData);
-        } else if (score < 0.5) {
+        } else if (score < 1) {
             goodResults.push(fileData);
         } else {
             okResults.push(fileData);
@@ -50,6 +50,10 @@ const SearchResults = ({images, file}) => {
 
     return (
         <div className="search-results">
+            <div className="search-header">
+                <img src="/images/circuit_logo_grey_small.svg" />
+                <span className="search-header-text">MATRIX CLONE-SPOTTER</span>
+            </div>
             <div className="back-button"><Link to="/">&#60; Back to image upload</Link></div>
             <div className="search-results-section">
                 <div className="heading">UPLOADED IMAGE</div>

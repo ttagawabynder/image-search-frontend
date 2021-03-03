@@ -17,14 +17,30 @@
 }
 
 .search-results-section {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .back-button {
-    margin-top: 18px;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 18px;
     color: #10BDC7;
+}
+
+.search-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 42px;
+    margin-top: 42px;
+}
+
+.search-header-text {
+    font-family: Syncopate;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 25px;
+    color: #3D4653;
+    margin-left: 13px;
 }
